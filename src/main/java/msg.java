@@ -6,10 +6,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class msg extends HttpServlet {
-    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String n=req.getParameter("name");
+    @Override
+    protected void service( HttpServletRequest req, HttpServletResponse res) throws IOException {
+        int n1 =Integer.parseInt(req.getParameter("num1"));
+        int n2=Integer.parseInt(req.getParameter("num2"));
+        int add=n1+n2;
            PrintWriter out = res.getWriter();
-           out.print("hello"+n);
+           out.print(n1+"+"+ n2+ "="+" "+add);
 
 
     }
