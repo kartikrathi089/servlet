@@ -6,10 +6,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class add extends HttpServlet {
-    public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException{
-       int a=(int) req.getAttribute("k");
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException{
+        int num=Integer.parseInt(req.getParameter("k"));
+        //this technique nis known as url redirecting in we get parameter from url
+        int sq=num*num;
         PrintWriter out=res.getWriter();
-        out.print("second servlet"+" "+a);
+        out.print("Square ="+sq);
+
 
 
     }

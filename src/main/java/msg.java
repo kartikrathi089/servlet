@@ -14,14 +14,7 @@ public class msg extends HttpServlet {
         int n1 =Integer.parseInt(req.getParameter("num1"));
         int n2=Integer.parseInt(req.getParameter("num2"));
         int add=n1+n2;
-        req.setAttribute("k",add);
-        RequestDispatcher rd=req.getRequestDispatcher("add");
-        // request dispatcher is an interface
-        rd.forward(req,res);
-
-
-
-
+        res.sendRedirect("add?k="+add);
     }
 
 }
