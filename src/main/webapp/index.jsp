@@ -1,5 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
 <html>
-<body>
-<h2>Hello World!</h2>
+<head>
+    <title>Square</title>
+</head>
+<body bgcolor='pink'>
+
+<%
+    int n1 = Integer.parseInt(request.getParameter("name"));
+    int sq = n1 * n1;
+    out.println("Square = " + sq);
+%>
+
+
 </body>
 </html>

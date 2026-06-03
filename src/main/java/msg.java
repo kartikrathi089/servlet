@@ -12,9 +12,11 @@ public class msg extends HttpServlet {
     protected void service( HttpServletRequest req, HttpServletResponse res)
             throws IOException , ServletException {
        int n1= Integer.parseInt(req.getParameter("name"));
-        HttpSession session=req.getSession();
-        session.setAttribute("k",n1);
-        res.sendRedirect("add");
+       int sq=n1*n1;
+       PrintWriter out=res.getWriter();
+       out.println("<html><body bgcolor='blue'>");
+       out.print("square = "+sq);
+       out.println("</body></html>");
 
 
     }
