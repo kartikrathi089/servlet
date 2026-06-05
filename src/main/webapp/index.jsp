@@ -5,7 +5,7 @@
 <head>
     <title>Square</title>
 </head>
-<body bgcolor='pink'>
+<body bgcolor='red'>
 
 <%
     int n1 = Integer.parseInt(request.getParameter("name"));
